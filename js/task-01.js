@@ -1,13 +1,15 @@
-const listCategoriesEl = document.querySelector('#categories');
+const categoriesEl = document.querySelector('#categories');
+const titlesEl = document.querySelectorAll('#categories h2');
+const itemsEl = document.querySelectorAll('.item ul');
 
-console.log(listCategoriesEl);
+console.log(`Number of categories: ${categoriesEl.children.length}`);
 
-// function countsItemsInCategoryList() {
-//   let total = 0;
-//   [...listCategoriesEl].forEach(element => {
-//     total += 1;
-//   });
-//   return `Количество категорий ${total}`;
-// }
+titlesEl.forEach((title, i) => {
+  console.log(`Category: ${title.textContent}`);
 
-// console.log(countsItemsInCategoryList());
+  itemsEl.forEach((item, y) => {
+    if (i === y) {
+      console.log(`Elements: ${item.children.length}`);
+    }
+  });
+});
