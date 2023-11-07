@@ -5,8 +5,10 @@ const buttonEl = document.querySelector('.change-color');
 buttonEl.addEventListener('click', onChangesBackgroundColor);
 
 function onChangesBackgroundColor() {
-  colorEl.textContent = getRandomHexColor();
-  bodyEl.style.backgroundColor = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+
+  colorEl.textContent = randomColor;
+  bodyEl.style.backgroundColor = randomColor;
 }
 
 function getRandomHexColor() {
