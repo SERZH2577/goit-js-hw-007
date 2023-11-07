@@ -1,9 +1,9 @@
 const formEl = document.querySelector('.login-form');
 const inputEl = document.querySelectorAll('.login-form input');
 
-formEl.addEventListener('submit', getsUserLoginDetails);
+formEl.addEventListener('submit', onGetsUserLoginDetails);
 
-function getsUserLoginDetails(evt) {
+function onGetsUserLoginDetails(evt) {
   evt.preventDefault();
 
   const emailValue = evt.target.elements.email.value;
