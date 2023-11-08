@@ -108,4 +108,47 @@ h2 {
   margin-bottom: 10px;
 }
 
+#controls {
+  align-items: center;
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 
+#controls input {
+  margin-right: 5px;
+}
+
+[data-create] {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  background-color: #a2cfe1;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 80px;
+  height: 44px;
+}
+
+[data-create]:active {
+  background-color: #8dc4d9;
+}
+
+[data-destroy] {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  background-color: #e6bbbb;
+  border: none;
+  border-radius: 4px;
+  width: 90px;
+  height: 44px;
+}
+
+[data-destroy]:active {
+  background-color: #e1aeae;
+}
+
+#boxes {
+  /* display: flex; */
+  margin-left: 20px;
+}
