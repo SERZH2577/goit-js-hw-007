@@ -18,9 +18,7 @@ function onAddsElements() {
     size += 10;
 
     arrElements.push(
-      `<div style="background-color: ${getRandomHexColor()}; width: ${
-        size + 'px'
-      }; height: ${size + 'px'};"></div>`,
+      `<div style="background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px;"></div>`,
     );
   }
 
