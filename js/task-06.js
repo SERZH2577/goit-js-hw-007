@@ -3,31 +3,32 @@ const btnCreateEl = document.querySelector('[data-create]');
 const btnDestroyEl = document.querySelector('[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
-btnCreateEl.addEventListener('click', onOoo);
-btnDestroyEl.addEventListener('click', onXxx);
+btnCreateEl.addEventListener('click', onAddsElements);
+btnDestroyEl.addEventListener('click', onClearsElements);
 
-function onOoo() {
+function onAddsElements() {
   if (inputEl.value === '' || inputEl.value < 1 || inputEl.value > 100) {
     return;
   }
 
-  boxesEl.innerHTML = '';
   let size = 20;
+  const arrElements = [];
 
   for (let i = 0; i < inputEl.value; i++) {
     size += 10;
-    const tagDiv = document.createElement('div');
-    tagDiv.style.marginBottom = '5px';
-    tagDiv.style.width = size + 'px';
-    tagDiv.style.height = size + 'px';
-    tagDiv.style.backgroundColor = getRandomHexColor();
-    boxesEl.appendChild(tagDiv);
+
+    arrElements.push(
+      `<div style="background-color: ${getRandomHexColor()}; width: ${
+        size + 'px'
+      }; height: ${size + 'px'};"></div>`,
+    );
   }
 
+  boxesEl.innerHTML = arrElements.join('');
   inputEl.value = '';
 }
 
-function onXxx() {
+function onClearsElements() {
   boxesEl.innerHTML = '';
   inputEl.value = '';
 }

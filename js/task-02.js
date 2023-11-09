@@ -15,18 +15,9 @@ const images = [
   },
 ];
 
-galleryEl.classList.add('list');
-
-images.forEach(e => {
-  const image = document.createElement('img');
-  image.src = e.url;
-  image.alt = e.alt;
-  image.style.width = '400px';
-  image.style.height = '260px';
-  image.style.borderRadius = '6px';
-
-  const item = document.createElement('li');
-  item.append(image);
-
-  galleryEl.append(item);
-});
+galleryEl.innerHTML = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src=${url} alt=${alt} style="width: 400px; height: 260px; border-radius: 8px;"></li>`,
+  )
+  .join('');
